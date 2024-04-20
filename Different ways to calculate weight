@@ -1,0 +1,56 @@
+#everything in comments is another method to achive the same goal
+#def convert_weight(weight, from_unit, to_unit):
+ #   if from_unit.lower() == 'k':
+       # Convert kilograms to pounds
+   #     if to_unit.lower() == 'l':
+    #        return weight * 2.20462
+     #   else:
+      #      return weight  # No conversion needed
+    #elif from_unit.lower() == 'l':
+     #   # Convert pounds to kilograms
+      #  if to_unit.lower() == 'k':
+       #     return weight / 2.20462
+        #else:
+         #   return weight  # No conversion needed
+    #else:
+     #   return None  # Invalid units
+
+print("Hello, let's calculate your weight in either Kilograms(K) or pounds(LB)")
+
+metric = True
+while metric:
+    how = input('Will you be giving your weight in Kilos or pounds? Enter K(k) for kilos or L(l) for pounds --> ')
+    if how.upper() == "K" or how.upper() == "L":
+        break
+    else:
+        print('You can only enter K(k) for kilos or L(l) for pounds!')
+        print()
+
+how = how.lower()
+while True:
+    weight = input('Sweet, now how much do you currently weigh? ')
+    try:
+        weight = float(weight)
+        break
+    except ValueError:
+        print('You can only enter a number')
+        print()
+
+#if how == 'k':
+ #   converted_weight_kg = weight
+  #  converted_weight_lb = convert_weight(weight, how, 'l')
+#else:
+ #   converted_weight_lb = weight
+  #  converted_weight_kg = convert_weight(weight, how, 'k')
+
+if how == 'k':
+    changed = weight / 0.45
+    print("Your weight in pounds(lbs) is: ", changed)
+else:
+    changed = weight * 0.45
+    print("Your weight in kilograms(kgs) is: ", changed)
+
+
+#print(f'Your weight is {converted_weight_kg} kilograms or {converted_weight_lb} pounds.')
+
+
