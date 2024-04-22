@@ -1,5 +1,5 @@
 print('Leap year check')
-year = int(input())
+year = int(input('What year is it?==> '))
 
 if year % 4 == 0:
     if year %100 == 0:
