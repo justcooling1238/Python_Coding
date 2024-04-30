@@ -1,0 +1,91 @@
+# print('WELCOME TO THE AMAZING RACE GAME')
+# username = input('What is your name? ')
+# print('Welcome to the game', username)
+import random
+print("Let's play rock, paper, scissors")
+computer_choices = ['rock', 'paper', 'scissors']
+computer_picks = random.choice(computer_choices)
+user_choices = {'r': 'rock', 'p': 'paper', 's': 'scissors'}
+user_pick = input('Please choose r(rock), s(scissors) or p(paper)--> ')
+user_choice_pick = user_choices.get(user_pick)
+if user_pick == 'r':
+    print("""
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    """)
+elif user_pick == 'p':
+    print("""
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    """)
+elif user_pick == 's':
+    print("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    """)
+
+print(f'You chose {user_choice_pick}')
+print(f'The computer chose {computer_picks}')
+if computer_picks == 'rock':
+    print("""
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    """)
+elif computer_picks == 'paper':
+    print("""
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    """)
+elif computer_picks =='scissors':
+    print("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    """)
+#paper
+if user_pick == 'p' and computer_picks == 'paper':
+    print("You got lucky, it's a tie")
+elif user_pick == 'r' and computer_picks == 'paper':
+    print ("Ha Ha Ha, YOU LOSE")
+elif user_pick == 's' and computer_picks == 'paper':
+    print("You cheated, I want a rematch")
+#rock
+if user_pick == 'p' and computer_picks == 'rock':
+    print("You cheated, I want a rematch")
+elif user_pick == 'r' and computer_picks == 'rock':
+    print ("You got lucky, it's a tie")
+elif user_pick == 's' and computer_picks == 'rock':
+    print("Ha Ha Ha, YOU LOSE")
+#scissors
+if user_pick == 'p' and computer_picks == 'scissors':
+    print("Ha Ha Ha, YOU LOSE")
+elif user_pick == 'r' and computer_picks == 'scissors':
+    print ("You cheated, I want a rematch")
+elif user_pick == 's' and computer_picks == 'scissors':
+    print("You got lucky, it's a tie")
+
+
+
