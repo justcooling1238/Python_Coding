@@ -1,0 +1,18 @@
+def niya():
+    print('this happens when I call the niya function')
+    print('later loser')
+def trevor():
+    while True:
+        brawl = input('Is brawl stars a cool game, type n or y only? ')
+        if brawl == 'n':
+            print('fudge you')
+            break
+        elif brawl == 'y':
+            print('you know whats up')
+            break
+        else:
+            print('do it right jerk')
+
+
+niya()
+trevor()
